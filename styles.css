@@ -1,0 +1,45 @@
+body {
+  background: #fafafa;
+  padding: 40px;
+  font-family: system-ui;
+}
+
+.stage {
+  width: 360px;
+  height: 360px;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  animation:
+    moveSquare 4s linear infinite,
+    cornerColors 4s linear infinite;
+}
+
+
+@keyframes moveSquare {
+  0%   { transform: translate(0, 0); }          
+  25%  { transform: translate(0, 220px); }      
+  50%  { transform: translate(220px, 220px); }  
+  75%  { transform: translate(220px, 0); }      
+  100% { transform: translate(0, 0); }
+}
+
+
+@keyframes cornerColors {
+  0%   { background: red; }       
+  25%  { background: blue; }      
+  50%  { background: green; }     
+  75%  { background: yellow; }    
+  100% { background: red; }
+}
